@@ -8,7 +8,7 @@ import { v4 as uuid } from "uuid";
  * - add: function - creates a new Box
  *
  * State:
- * - none
+ * - FIXME: formData: {example of expected form fields}
  *
  * App -> BoxList -> NewBoxForm
  */
@@ -22,6 +22,7 @@ function NewBoxForm({ add }) {
 
   console.log("NewBoxForm rendered with: ", formData)
 
+  // FIXME: docstring
   function handleChange(evt) {
     const { name, value } = evt.target;
     setFormData(fData => ({
@@ -30,8 +31,13 @@ function NewBoxForm({ add }) {
     }));
   }
 
+  // FIXME: docstring
   function handleSubmit(evt) {
     evt.preventDefault();
+
+    // TODO: pay special attention to formData.height and formData.width
+    // coercing into correct type often is done in the handleSubmit to ensure
+    // data is in expected type
     add(formData);
     setFormData({ height: "", width: "", backgroundColor: "" });
   }

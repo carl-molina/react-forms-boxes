@@ -10,9 +10,9 @@ import { v4 as uuid } from "uuid";
  * - None
  *
  * State:
- * - boxes: the list of boxes
+ * - boxes: {TODO: provide example box} - the list of boxes
  *
- * App -> BoxList -> Box AND NewBoxForm
+ * App -> BoxList -> {Box, NewBoxForm}
  */
 
 function BoxList() {
@@ -20,12 +20,15 @@ function BoxList() {
 
   console.log("BoxList rendered with: ", boxes)
 
+  // FIXME: docstring
   function addBox(box) {
     const newBox = { ...box, id: uuid() };
     setBoxes(curr => [...curr, newBox]);
   }
 
+  // FIXME: docstring
   function removeBox(id) {
+    // TODO: could be more descriptive with variable names curr = boxes, x = box
     setBoxes(curr => curr.filter(x => x.id !== id));
   }
 

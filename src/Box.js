@@ -4,7 +4,7 @@ import React from 'react';
  * An individual box with styling from NewBoxForm
  *
  * Props:
- * - id: number - unique UUID
+ * - id: UUID
  * - width: number - in px
  * - height: number - in px
  * - backgroundColor: string - color string
@@ -20,6 +20,7 @@ function Box({ id, width, height, backgroundColor, remove }) {
 
   console.log("Box rendered with id: ", id)
 
+  // FIXME: docstring
   function handleRemove() {
     remove(id);
   }

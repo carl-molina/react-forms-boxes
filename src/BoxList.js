@@ -2,6 +2,17 @@ import React, { useState } from "react";
 import Box from "./Box";
 import { v4 as uuid } from "uuid";
 
+/**
+ * A container to manage a list of boxes
+ *
+ * Props:
+ * - None
+ *
+ * State:
+ * - boxes: the list of boxes
+ *
+ * App -> BoxList -> Box AND NewBoxForm
+ */
 
 function BoxList() {
   const [boxes, setBoxes] = useState([]);

@@ -1,5 +1,7 @@
 import './App.css';
-import BoxList from "./BoxList"
+import BoxList from "./BoxList";
+
+/** Main app component */
 
 function App() {
   return (

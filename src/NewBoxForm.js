@@ -40,7 +40,7 @@ function NewBoxForm({ add }) {
     <div className="NewFormBox">
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="NewFormBox-height">Height: </label>
+          <label htmlFor="NewFormBox-height">Height (in px): </label>
           <input
             id="NewBoxForm-height"
             onChange={handleChange}
@@ -49,7 +49,7 @@ function NewBoxForm({ add }) {
           />
         </div>
         <div>
-          <label htmlFor="NewFormBox-width">Width: </label>
+          <label htmlFor="NewFormBox-width">Width (in px): </label>
           <input
             id="NewBoxForm-width"
             onChange={handleChange}

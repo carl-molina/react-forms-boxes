@@ -20,6 +20,7 @@ function NewBoxForm({ add }) {
     backgroundColor: "",
   });
 
+  console.log("NewBoxForm rendered with: ", formData)
 
   function handleChange(evt) {
     const { name, value } = evt.target;
@@ -31,7 +32,7 @@ function NewBoxForm({ add }) {
 
   function handleSubmit(evt) {
     evt.preventDefault();
-    add({ ...formData, id: uuid() });
+    add(formData);
     setFormData({ height: "", width: "", backgroundColor: "" });
   }
 

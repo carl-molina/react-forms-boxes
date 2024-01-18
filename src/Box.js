@@ -18,6 +18,8 @@ import React from 'react';
 
 function Box({ id, width, height, backgroundColor, remove }) {
 
+  console.log("Box rendered with id: ", id)
+
   function handleRemove() {
     remove(id);
   }
@@ -31,6 +33,7 @@ function Box({ id, width, height, backgroundColor, remove }) {
           width: `${width}px`,
           backgroundColor: backgroundColor
         }}
+        id={id}
       />
       <button className="Box-removeBtn" onClick={handleRemove}> X </button>
     </div>

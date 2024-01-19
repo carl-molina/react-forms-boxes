@@ -18,9 +18,10 @@ import React from 'react';
 
 function Box({ id, width, height, backgroundColor, remove }) {
 
-  console.log("Box rendered with id: ", id)
+  console.log("Box rendered with id: ", id);
 
-  // FIXME: docstring
+  /** Remove a box */
+
   function handleRemove() {
     remove(id);
   }

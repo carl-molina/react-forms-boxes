@@ -10,7 +10,7 @@ import { v4 as uuid } from "uuid";
  * - None
  *
  * State:
- * - boxes: {TODO: provide example box} - the list of boxes
+ * - boxes: Box[] - [{ id, width, height, backgroundColor }]
  *
  * App -> BoxList -> {Box, NewBoxForm}
  */
@@ -18,18 +18,17 @@ import { v4 as uuid } from "uuid";
 function BoxList() {
   const [boxes, setBoxes] = useState([]);
 
-  console.log("BoxList rendered with: ", boxes)
+  console.log("BoxList rendered with: ", boxes);
 
-  // FIXME: docstring
+  /** Add a box to state - { id, width, height, backgroundColor } */
   function addBox(box) {
     const newBox = { ...box, id: uuid() };
     setBoxes(curr => [...curr, newBox]);
   }
 
-  // FIXME: docstring
+  /** Remove a box that matches an ID */
   function removeBox(id) {
-    // TODO: could be more descriptive with variable names curr = boxes, x = box
-    setBoxes(curr => curr.filter(x => x.id !== id));
+    setBoxes(boxes => boxes.filter(box => box.id !== id));
   }
 
   return (

@@ -8,7 +8,7 @@ import { v4 as uuid } from "uuid";
  * - add: function - creates a new Box
  *
  * State:
- * - FIXME: formData: {example of expected form fields}
+ * - formData: object - { height, width, backgroundColor }
  *
  * App -> BoxList -> NewBoxForm
  */
@@ -22,7 +22,8 @@ function NewBoxForm({ add }) {
 
   console.log("NewBoxForm rendered with: ", formData)
 
-  // FIXME: docstring
+  /** Update form input from changes */
+
   function handleChange(evt) {
     const { name, value } = evt.target;
     setFormData(fData => ({
@@ -31,7 +32,7 @@ function NewBoxForm({ add }) {
     }));
   }
 
-  // FIXME: docstring
+  /** Submit form: call function from parent & clear inputs */
   function handleSubmit(evt) {
     evt.preventDefault();
 
